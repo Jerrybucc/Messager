@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" user-scalable="no"/>
+	<script type="text/javascript" src="__PUBLIC__/Static/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Static/jquery.mobile/jquery.mobile-1.4.5.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Static/Home/javascripts/default.js"></script>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Static/jquery.mobile/jquery.mobile-1.4.5.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Static/Home/stylesheets/index.css">
+	<title>Messager</title>
+</head>
+<body>
+<div data-role="page" data-theme="a">
+	<!-- // <script type="text/javascript" src="__PUBLIC__/Static/Home/javascripts/index.js"></script> -->
+	<div data-role="header" data-position="fixed">
+		<a href="__CONTROLLER__/index" data-role="button" data-icon="back">back</a>
+		<h1>Messager</h1>
+	</div>
+	<div data-role="content">
+			<div class="top">{$page}</div>
+			<volist name="messagers" id="messagers">
+				<div data-role="collapsible">
+					<h1>{$messagers.name}:</h1>
+					<p>{$messagers.note}<span class="right">{$messagers.cdate}</span></p>
+				</div>
+			</volist>
+			<!-- test -->
+			<div class="bottom">{$page}</div>
+			<script type="text/javascript">
+				$('.top .prev').text()=='prev'?$('.top').html('<a class="refresh" href="/Messager/index.php/Home/Index/messager/p/1.html" data-role="button">Refresh</a>'):$('.top').remove();$('.num').remove();$('.current').remove();$('.top .next').remove();$('.top .prev').remove();$('.bottom .prev').remove();$('.bottom .next').text('Load more');$('.bottom .next').attr('data-role','button');
+			</script>
+		</div>
+	<div data-role="footer" data-position="fixed"></div>
+</div>
+</body>
+</html>
