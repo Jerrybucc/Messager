@@ -18,6 +18,14 @@ $(function () {
   			})
   		}
 	});
+
+	$('#clear').click(function () {
+  			$.get("/Messager/index.php/Home/Index/cleardata",
+  				function () {
+  					window.location.href="/Messager/index.php/Home/Index/messager";
+  			})
+	});
+	
 	//scroll
 	if ($('.top .prev').text()=="prev") {
 					$('.top').html('<a class="refresh" href="/Messager/index.php/Home/Index/messager/p/1.html" data-role="button">Refresh</a>');

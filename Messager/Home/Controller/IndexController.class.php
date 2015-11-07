@@ -21,7 +21,11 @@ public function postMessager()
     {
         $this -> display();
     }
-public function warm()
+public function warn()
+    {
+        $this -> display();  
+    }
+public function clear()
     {
         $this -> display();  
     }
@@ -40,6 +44,11 @@ public function post()
             $Messagers = D('Messagers');
             $Messagers -> add($data);
         }
+    }
+public function cleardata()
+    {
+          $messagers = D('Messagers');
+          $messagers -> where("id>0") -> delete();
     }
 
 }
