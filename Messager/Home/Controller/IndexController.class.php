@@ -37,18 +37,41 @@ public function post()
             return;
         } else {
             $data = array(
-            "name" => $name,
-            "note" => $note,
-            "cdate" => date("Y-m-d H:i:s",time())
+                "name" => $name,
+                "note" => $note,
+                "cdate" => date("Y-m-d H:i:s",time()),
+                "done" => 0
             );
             $Messagers = D('Messagers');
             $Messagers -> add($data);
         }
     }
+public function Done()
+{   $id = I('post.')['id'];
+
+    $messagers = D('Messagers');
+    $data['done'] = 1;
+
+    $messagers -> where("id = $id") -> save($data);
+}
+public function Undone()
+{   $id = I('post.')['id'];
+
+    $messagers = D('Messagers');
+    $data['done'] = 0;
+
+    $messagers -> where("id = $id") -> save($data);
+}
+public function delete()
+    {
+        $id = I('post.')['id'];
+        $messagers = D('Messagers');
+        $messagers -> where("id = $id") -> delete();
+    }
 public function cleardata()
     {
           $messagers = D('Messagers');
-          $messagers -> where("id>0") -> delete();
+          $messagers -> where("id > 0") -> delete();
     }
 
 }
