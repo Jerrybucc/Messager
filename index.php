@@ -9,7 +9,7 @@ define('APP_DEBUG',true);
 // define('APP_DEBUG',false);
 
 // 定义应用目录
-define('APP_PATH','./Messager/');
+define('APP_PATH','./No.100/');
 
 // 定义运行时目录
 define('RUNTIME_PATH','./Runtime/');
