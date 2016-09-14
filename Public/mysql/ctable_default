@@ -12,5 +12,6 @@ CREATE TABLE `messager_db`.`messagers` (
   `note` LONGTEXT NOT NULL,
   `cdate` DATETIME NOT NULL,
   `done` INT NOT NULL,
+  `ip` INT NOT NULL,
   PRIMARY KEY (`id`));
 

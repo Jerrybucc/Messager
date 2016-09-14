@@ -10,13 +10,13 @@ $(function () {
 		var _name = $('#name').val();
   		var _note = $('#note').val();
   		if (_name==""||_note=="") {
-  			// window.location.href="/Messager/index.php/Home/Index/warn#invalid";
+  			// window.location.href="/No.100/index.php/Home/Index/warn#invalid";
   		}else{
-  			$.post("/Messager/index.php/Home/Index/post",{
+  			$.post("/No.100/index.php/Home/Index/post",{
   				name:_name,
   				note:_note
   			},function () {
-  				window.location.href="/Messager/index.php/Home/Index/messager";
+  				window.location.href="/No.100/index.php/Home/Index/messager";
   			})
   		}
 	});
@@ -24,7 +24,7 @@ $(function () {
 // done && undone
 	$('.done').click(function () {
 			var uid = $(this).siblings('.id').text();
-  			$.post("/Messager/index.php/Home/Index/done",{
+  			$.post("/No.100/index.php/Home/Index/done",{
   				id:uid
   			},function () {
   				window.location.reload();
@@ -33,7 +33,7 @@ $(function () {
 
 	$('.undone').click(function () {
 			var uid = $(this).siblings('.id').text();
-  			$.post("/Messager/index.php/Home/Index/undone",{
+  			$.post("/No.100/index.php/Home/Index/undone",{
   				id:uid
   			},function () {
   				window.location.reload();
@@ -43,7 +43,7 @@ $(function () {
 //delete
 	$('.delete').click(function () {
 			var uid = $(this).siblings('.id').text();
-  			$.post("/Messager/index.php/Home/Index/delete",{
+  			$.post("/No.100/index.php/Home/Index/delete",{
   				id:uid
   			},function () {
   				window.location.reload();
@@ -52,15 +52,15 @@ $(function () {
 
 // clear
 	$('#clear').click(function () {
-  			$.get("/Messager/index.php/Home/Index/cleardata",
+  			$.get("/No.100/index.php/Home/Index/cleardata",
   				function () {
-  					window.location.href="/Messager/index.php/Home/Index/messager";
+  					window.location.href="/No.100/index.php/Home/Index/messager";
   			})
 	});
 	
 	//scroll
 	if ($('.top .prev').text()=="prev") {
-					$('.top').html('<a class="refresh" href="/Messager/index.php/Home/Index/messager/p/1.html" data-role="button">Refresh</a>');
+					$('.top').html('<a class="refresh" href="/No.100/index.php/Home/Index/messager/p/1.html" data-role="button">Refresh</a>');
 				} else{
 					$('.top').remove();
 				};
