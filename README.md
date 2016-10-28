@@ -9,7 +9,7 @@ Add to your localhost:<br/><br/>
 Open your web browser and go to http://localhost/ to test No.100<br/><br/>
 Or, use your mobile device to open your localhost as a server(you can add to your home screen by safari or chrome):<br/><br/>
 
-##Demo[http://139.196.114.227/No.100]
+##[Demo](http://139.196.114.227/No.100)
 
 ##Contact
 email: Jerrychenshikan@gmail.com
