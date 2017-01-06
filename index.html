@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <meta content="telephone=no,email=no" name="format-detection"/>
+  <meta name="viewport" content="width=device-width" user-scalable="no"/>
+  
+  <link rel="shortcut icon" size="64x64" href="images/icon.png"/>
+  <link rel="icon" size="64x64" href="images/icon.png"/>
+  <link rel="apple-touch-icon" size="64x64" href="images/icon.png"/>
+  
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="jquery.mobile/jquery.mobile-1.4.5.js"></script>
+  <link rel="stylesheet" type="text/css" href="jquery.mobile/jquery.mobile-1.4.5.css">
+  <link rel="stylesheet" type="text/css" href="inline.css">
+  <title>No.100</title>
+</head>
+<body>
+<div data-role="page" data-theme="a" id="home">
+  <div data-role="header" data-position="fixed">
+    <h1>No.100</h1>
+  </div>
+  <div data-role="content">
+    <a class="static" id="butShowAddens" href="#showAddens" data-role="button" data-transition="flip" data-icon="grid" data-iconpos="right">Show Addens</a>
+    <a class="static" href="#add" data-role="button" data-icon="arrow-r" data-iconpos="right">Add one</a>
+    <a class="static" href="#clear" data-role="button" data-icon="alert" data-iconpos="right">Clear Data</a>
+    <br/>
+  </div>
+  <div data-role="footer" data-position="fixed"></div>
+</div>
+
+<div data-role="page" data-theme="a" id="showAddens">
+  <div data-role="header" data-position="fixed">
+    <a href="#home" data-role="button" data-icon="back">back</a>
+    <h1>No.100</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="collapsible">
+      <h1></h1>
+      <p></p>
+      <div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
+        <text class="hide id"></text>
+        <button class="butCheck" data-role="button" data-icon="check">Check</button>
+        <button class="butDelete" data-role="button" data-icon="delete">Delete</button>
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed"></div>
+</div>
+
+<div data-role="dialog" data-theme="a" id="add">
+  <div data-role="header" data-position="fixed">
+    <h1>No.100</h1>
+  </div>
+  <div data-role="content">
+<!-- post messager -->
+    <input id="name" type="text" name="name" placeholder="Enter Title"/>
+    <textarea id="note" rows="5" name="note" placeholder="Enter Detail"></textarea>
+    <button data-role="button" id="butAdd">Add Now!</button>
+<!-- post messager -->
+  </div>
+</div>
+
+<div data-role="dialog" data-theme="a" id="clear">
+  <div data-role="header">
+    <h1>Warning</h1>
+    </div>
+    <div data-role="content"> 
+    All Data will be cleared!<br/>
+    <button id="butConfirm" data-role="button">Confirm</button>
+    </div>
+</div>
+
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
