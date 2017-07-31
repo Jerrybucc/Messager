@@ -59,5 +59,5 @@ $(function () {
   app.flush();
 
   //copyright
-  document.querySelector("div[data-role='footer']").innerHTML = '<p class="form">©2016 - '+new Date().getFullYear()+' Gerald Chen</p>';
+  document.querySelector("div[data-role='footer']").innerHTML = '<p class="form">©2016 - '+new Date().getFullYear()+' Jerry Chen</p>';
 });
