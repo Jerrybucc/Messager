@@ -4,7 +4,6 @@ $(function () {
     addenPanel : document.getElementById('addens')
   }
 
-  // TODO implement getting data from server
   document.getElementById('butShowAddens').addEventListener('click', function () {
     
   });
